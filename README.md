@@ -18,7 +18,7 @@ Portfolio risk analytics and optimization system for 28 NSE large-cap stocks usi
 |---|---|
 | Stock Selector | Build custom portfolios from 28 NSE stocks across 9 sectors |
 | VaR and CVaR | Historical simulation and parametric VaR with fat-tail evidence |
-| CDaR | Conditional Drawdown at Risk — captures prolonged losses VaR misses |
+| CDaR | Conditional Drawdown at Risk - captures prolonged losses VaR misses |
 | Efficient Frontier | Modern Portfolio Theory optimisation with Sharpe and Min-Vol portfolios |
 | Rolling Analysis | Rolling volatility, Sharpe ratio, and correlation over user-defined windows |
 | What-If Rebalancer | Shift allocation between stocks and see risk metrics update instantly |
@@ -30,11 +30,11 @@ Portfolio risk analytics and optimization system for 28 NSE large-cap stocks usi
 
 | Page | What it shows |
 |---|---|
-| Universe Overview | All 28 stocks — normalised performance, risk-return scatter, Sharpe ranking |
+| Universe Overview | All 28 stocks - normalised performance, risk-return scatter, Sharpe ranking |
 | Build Your Portfolio | Stock selector with equal, optimised, or custom weights |
 | Risk Metrics | VaR, CVaR, CDaR, drawdown, fat-tail test, efficient frontier, Monte Carlo |
 | Rolling Analysis | Rolling volatility, Sharpe, and correlation with adjustable window |
-| What-If Rebalancer | Shift allocation between any two stocks — before vs after comparison |
+| What-If Rebalancer | Shift allocation between any two stocks - before vs after comparison |
 
 ---
 
@@ -42,17 +42,17 @@ Portfolio risk analytics and optimization system for 28 NSE large-cap stocks usi
 
 **1. Returns are NOT normally distributed**
 Jarque-Bera test rejects normality (p-value ≈ 0). Excess kurtosis of 3.14
-confirms fat tails — parametric VaR underestimates true tail risk by ~7%.
+confirms fat tails - parametric VaR underestimates true tail risk by ~7%.
 Historical simulation VaR is more reliable for this universe.
 
 **2. The diversification illusion**
-Average pairwise correlation is 0.23 — suggesting good diversification.
+Average pairwise correlation is 0.23 - suggesting good diversification.
 But correlation peaked at 0.42 on 28 February 2022 (Russia-Ukraine invasion).
-Stocks became significantly more correlated during the crisis — diversification
+Stocks became significantly more correlated during the crisis - diversification
 collapses exactly when investors need it most.
 
 **3. CDaR reveals hidden risk**
-Bharti Airtel has acceptable 1-day VaR of -2.66% but CDaR of -43.47% —
+Bharti Airtel has acceptable 1-day VaR of -2.66% but CDaR of -43.47% -
 meaning in sustained drawdown periods it loses far more than daily VaR suggests.
 CDaR captures prolonged losses that VaR completely misses.
 
@@ -63,7 +63,7 @@ versus post-COVID pent-up demand recovery in consumer discretionary.
 
 **5. Optimisation bias warning**
 The Max Sharpe portfolio concentrates 60% in 7 stocks based on historical returns.
-This is in-sample optimisation — it fits the past, not the future.
+This is in-sample optimisation - it fits the past, not the future.
 A production portfolio would add turnover constraints and use forward-looking return estimates.
 
 ---
@@ -105,7 +105,7 @@ Portfolio-Risk-Analyser/
 ├── README.md
 ├── notebooks/
 │   ├── 00_download_universe.py     # Download 28 NSE stocks via yfinance
-│   ├── 01_eda.py                   # EDA — normalised performance, fat tails, rolling correlation
+│   ├── 01_eda.py                   # EDA - normalised performance, fat tails, rolling correlation
 │   ├── 02_risk_metrics.py          # VaR, CVaR, CDaR, Sharpe, efficient frontier
 │   ├── 03_optimisation.py          # Max Sharpe and Min Vol portfolio optimisation
 │   └── 04_stress_test.py           # Historical crisis and Monte Carlo stress tests
