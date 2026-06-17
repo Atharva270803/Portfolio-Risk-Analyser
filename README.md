@@ -5,10 +5,10 @@
 ![NSE](https://img.shields.io/badge/NSE-28%20Stocks-green)
 ![Status](https://img.shields.io/badge/Status-Live-brightgreen)
 
-portfolio risk analytics and optimization system for 28 NSE large-cap stocks using historical data from 2021–2024. The platform measures portfolio risk through VaR and CDaR, while examining diversification dynamics via rolling correlation analysis. Features an interactive optimizer that supports real-time allocation adjustments and scenario-based rebalancing.
+Portfolio risk analytics and optimization system for 28 NSE large-cap stocks using historical data from 2021–2024. The platform measures portfolio risk through VaR and CDaR, while examining diversification dynamics via rolling correlation analysis. Features an interactive optimizer that supports real-time allocation adjustments and scenario-based rebalancing.
 
 ## Live Demo
-🔗 [Live Streamlit App](paste-your-url-here)
+🔗 [Live Streamlit App](https://portfolio-risk-analyser-dw9te4tk7spdxrpdnfyjqk.streamlit.app/)
 
 ---
 
@@ -98,6 +98,7 @@ A production portfolio would add turnover constraints and use forward-looking re
 
 ## Project Structure
 
+```
 Portfolio-Risk-Analyser/
 ├── app.py                          # Main Streamlit application
 ├── requirements.txt
@@ -116,6 +117,7 @@ Portfolio-Risk-Analyser/
 │   ├── portfolio_summary.csv       # Equal-weight portfolio summary
 │   └── optimal_weights.csv         # Max Sharpe and Min Vol weights
 └── assets/charts/                  # EDA and analysis charts
+```
 
 ---
 
